@@ -1,2 +1,3 @@
 ---
 # tasks file for demorole_01
+- include_task: install_java.yaml
