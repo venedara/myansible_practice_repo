@@ -3,3 +3,13 @@
   template:
       src: templates/mytomuser.j2
       dest: /opt/tomcat/conf/tomcat-users.xml
+
+- name: copy tomcat webapps manager file into node side.
+  template:
+      src: templates/mytomwebmanager.j2
+      dest: /opt/tomcat/webapps/manager/META-INF/context.xml
+
+- name: copy tomcat webapps host manager file into node side.
+  template:
+      src: templates/mytomhostmanager.j2
+      dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
