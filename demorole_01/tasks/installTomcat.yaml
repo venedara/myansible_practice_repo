@@ -12,6 +12,5 @@
 
 - name: extract the files
   command:
-    become: yes
     cmd: sudo tar -xf /tmp/apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/
     creates: /opt/tomcat/LICENSE
