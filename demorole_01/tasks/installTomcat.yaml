@@ -2,7 +2,7 @@
 - name: download tomcat url from website
   get_url:
     url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz
-    dest: /tmp/apache-tomcat-8.5.5.tar.gz
+    dest: /home/venedara/apache-tomcat-8.5.5.tar.gz
     force_basic_auth: yes
 
 - name: Create a directory /opt/tomcat if it does not exist
@@ -12,5 +12,5 @@
 
 - name: extract the files
   command:
-    cmd: sudo tar -xf /tmp/apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/
+    cmd: sudo tar -xf /home/venedara/apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/
     creates: /opt/tomcat/LICENSE
