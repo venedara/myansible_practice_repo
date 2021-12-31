@@ -1,8 +1,8 @@
 ---
 - name: download tomcat url from website
   get_url:
-    url: https://www-us.apache.org/dist/tomcat/tomcat-10/v10.0.8/bin/apache-tomcat-10.0.8.tar.gz
-    dest: /tmp/apache-tomcat-10.0.8.tar.gz
+    url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz
+    dest: /tmp/apache-tomcat-8.5.5.tar.gz
     force_basic_auth: yes
 
 - name: Create a directory /opt/tomcat if it does not exist
