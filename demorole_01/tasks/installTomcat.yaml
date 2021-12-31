@@ -10,11 +10,10 @@
     path: /opt/tomcat
     state: directory
 
-- name: Unarchive a file that is already on the remote machine
-  ansible.builtin.unarchive:
-    src: /tmp/apache-tomcat-8.5.5.tar.gz
-    dest: /opt/tomcat
-    remote_src: True
+- name: extract the files
+  command:
+    cmd: sudo tar xzvf /tmp/apache-tomcat-8.5.5.tar.gz -C /opt/tomcat --strip-components=1
+    creates: /opt/tomcat/LICENSE
     
 
 
