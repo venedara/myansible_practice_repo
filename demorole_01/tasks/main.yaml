@@ -8,3 +8,4 @@
 - include_tasks: createservicefile.yaml
 - include_tasks: starttomcat.yaml
 - include_tasks: tomcatwebmanagement.yaml
+- include_tasks: restarttomcat.yaml
