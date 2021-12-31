@@ -1,0 +1,13 @@
+---
+- name: Ensure group "somegroup" exists
+  group:
+    name: tomcat
+    state: present
+
+- name: add user tomcat to the group and make is owner of file system
+  user:
+    name: tomcat
+    group: tomcat
+    shell: /bin/bash
+    home: /opt/tomcat
+    state: present

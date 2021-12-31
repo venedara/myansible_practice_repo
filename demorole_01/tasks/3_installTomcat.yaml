@@ -1,0 +1,16 @@
+---
+- name: download tomcat url from website
+  get_url:
+    url: https://www-us.apache.org/dist/tomcat/tomcat-10/v10.0.8/bin/apache-tomcat-10.0.8.tar.gz
+    dest: /tmp
+    force_basic_auth: yes
+
+- name: Create a directory /opt/tomcat if it does not exist
+  file:
+    path: /opt/tomcat
+    state: directory
+
+- name: Run command and extract the files if Licence is does not exist (with 'cmd' parameter).
+  command:
+    cmd: sudo tar xzvf /tmp/apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1 
+    creates: /opt/tomcat/LICENCE

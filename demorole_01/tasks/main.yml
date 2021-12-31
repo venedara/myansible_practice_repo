@@ -1,3 +1,9 @@
 ---
 # tasks file for demorole_01
-- include_task: install_java.yaml
+- include_task: 1_install_java.yaml
+- include_task: 2_createTomCatuser.yaml
+- include_task: 3_installTomcat.yaml
+- include_task: 4_permissions.yaml
+- include_task: 5_createservicefile.yaml
+- include_task: 6_starttomcat.yaml
+

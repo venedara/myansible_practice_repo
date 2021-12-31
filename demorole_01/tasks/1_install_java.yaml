@@ -1,0 +1,11 @@
+---
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+
+- name: Install latest version of "default-jdk" ignoring "install-recommends"
+  apt:
+    name: default-jdk
+    state: present
+    
+
