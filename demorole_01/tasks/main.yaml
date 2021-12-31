@@ -7,4 +7,3 @@
 - include_tasks: permissions.yaml
 - include_tasks: createservicefile.yaml
 - include_tasks: starttomcat.yaml
-
