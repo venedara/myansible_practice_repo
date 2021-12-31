@@ -10,11 +10,6 @@
     path: /opt/tomcat
     state: directory
 
-- name: Run command if /path/to/database does not exist (with 'cmd' parameter).
-  command:
-    cmd: /usr/bin/make_database.sh db_user db_name
-    creates: /opt/tomcat/LICENSE
-
 - name: extract the files
   command:
     become: yes
