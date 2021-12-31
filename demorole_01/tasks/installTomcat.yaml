@@ -15,6 +15,7 @@
 - name: Unarchive a file that is already on the remote machine
   ansible.builtin.unarchive:
     src: /tmp/
-    dest: /opt/tomcat/
+    dest: /opt/tomcat
+    creates: /opt/tomcat/apache-tomcat-8.5.5
     remote_src: yes
 
