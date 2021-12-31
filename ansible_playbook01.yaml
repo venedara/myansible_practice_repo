@@ -1,0 +1,5 @@
+---
+- hosts: 192.168.0.108
+  become: yes
+  roles:
+  - {role: demorole_01 , when: ansible_os_family=="Debain"}
