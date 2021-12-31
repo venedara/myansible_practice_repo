@@ -10,8 +10,13 @@
     path: /opt/tomcat
     state: directory
 
+- name: Run command if /path/to/database does not exist (with 'cmd' parameter).
+  command:
+    cmd: /usr/bin/make_database.sh db_user db_name
+    creates: /opt/tomcat/LICENSE
+
 - name: extract the files
   command:
     become: yes
-    cmd: sudo tar xzvf /tmp/apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
+    cmd: sudo tar -xf /tmp/apache-tomcat-${VERSION}.tar.gz -C /opt/tomcat/
     creates: /opt/tomcat/LICENSE
