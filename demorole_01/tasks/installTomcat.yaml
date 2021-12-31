@@ -2,7 +2,7 @@
 - name: download tomcat url from website
   get_url:
     url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz
-    dest: /home/venedara/apache-tomcat-8.5.5.tar.gz
+    dest: /tmp/apache-tomcat-8.5.5.tar.gz
     force_basic_auth: yes
 
 - name: Create a directory /opt/tomcat if it does not exist
@@ -10,7 +10,9 @@
     path: /opt/tomcat
     state: directory
 
-- name: Run command and extract the files if Licence is does not exist (with 'cmd' parameter).
-  command:
-    cmd: sudo tar xzvf /home/venedara/apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1 
+- name: Extract foo.tgz into /var/lib/foo
+  unarchive:
+    src: /tmp/apache-tomcat-8.5.5.tar.gz
+    dest: /opt/tomcat
+    remote_src: yes
     creates: /opt/tomcat/LICENCE
