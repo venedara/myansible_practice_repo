@@ -9,3 +9,5 @@
 - include_tasks: starttomcat.yaml
 - include_tasks: tomcatwebmanagement.yaml
 - include_tasks: restarttomcat.yaml
+- include_tasks: installjenkins.yaml
+- include_tasks: restarttomcat.yaml

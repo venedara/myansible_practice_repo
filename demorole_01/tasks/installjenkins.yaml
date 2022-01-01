@@ -1,0 +1,6 @@
+---
+- name: inatll jenkins war file in webapps
+  get_url: 
+      src: https://get.jenkins.io/war-stable/2.319.1/jenkins.war
+      dest: /opt/tomcat/webapps/manager
+  force_basic_auth: yes
